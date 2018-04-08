@@ -30,11 +30,44 @@ for(int i=1;i<=number;i++)
 	printf("%d\t\t",arrival[i]);
 	printf("%d\n",brust_time[i]);
 }
-for(i=0;i<100;i=i+time_quantum)
-{
-	if(i=arrival[i])
-	{
-		printf()
-	}
-}
+       int tq=	time_quantum
+ for(time=0;remain!=n;time=time+tq)
+    {
+	flag=0;
+        s=9;
+        for(i=0;i<n;i++)
+        {
+            if(at[i]<=time && rt[i]<=rt[s] && rt[i]>0)
+            {
+                s=i;
+            }
+        }
+	if(rt[s]>=tq){
+		flag=1;
+        rt[s]=rt[s]-tq;
+		}
+	else if(rt[s]<tq){
+		flag=2;
+		if(flag2==0){
+			index=s;
+			flag2=1;
+		}
+		if(s!=index)time=time-tq;
+		time+=rt[s];
+		rt[s]=0;
+		}
+        if(rt[s]==0)
+        {
+		if(flag1==0){
+			index=s;
+			flag1=1;
+		}
+
+            remain++;
+		if(flag==1)
+            endTime=time+tq;
+		else if(flag==2)
+	    endTime=time;
+		else
+	    endTime=time+tq;
 }
