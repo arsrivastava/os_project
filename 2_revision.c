@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<fcntl.h>
+#include<graphics.h>
 #include<conio.h>
 int main()
 {
@@ -70,4 +71,15 @@ for(int i=1;i<=number;i++)
 	    endTime=time;
 		else
 	    endTime=time+tq;
+		
+		
+	//for graphics
+			/////////////////////////////////////////////////////////////
+ int gd = DETECT, gm;
+ 
+   initgraph(&gd, &gm, "C:\\TC\\BGI");
+ 
+   getch();
+   closegraph();
+    return 0;
 }
